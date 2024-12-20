@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>respg</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="vid-gall.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1> VIDEO GALLERY</h1>
+            <div class="row re">
+                <div class="col">
+                    <div class="feature-img" style="cursor: pointer;" onclick='playvideo("https://www.youtube.com/embed/DcO9rwqr79c?si=YO2kaCYqd58uW7qZ")'>
+                        <img src="vidsnimgs\Screenshot_11-4-2024_23509_127.0.0.1.jpeg" id="mng" width="100%">
+                        
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="small-img-row">
+                        <div class="small-img" onclick="playvideo('https://www.youtube.com/embed/QHtPvWy4mVI?si=ABmO6M_2AYIrMsKV')">
+                            <img src="vidsnimgs\Screenshot_2-5-2024_13610_127.0.0.1.jpeg" alt="" >
+                        </div>
+                        <p>A short doc on Nigeria</p>
+                    </div>
+                    <div class="small-img-row">
+                        <div class="small-img" onclick="playvideo('https://youtube.com/embed/KTHAPbBkrKs?si=IARS6AUmKBxJuSZi')">
+                            <img src="vidsnimgs\Screenshot_29-9-2024_175028_www.youtube.com.jpeg" alt="" >
+                        </div>
+                        <p>A short documentary on Nigeria</p>
+                    </div>
+                    <div class="small-img-row">
+                        <div class="small-img" onclick="playvideo('https://www.youtube.com/embed/pTnNGGBga8E?si=6gZGxb9SADDZR0zX')">
+                            <img src="vidsnimgs/Screenshot_2-5-2024_13811_127.0.0.1.jpeg" alt="" >
+                        </div>
+                        <p>Intresting facts about Nigeria</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="video-player" id="video-player">
+            <iframe id="fvd" width="100%" height="100%" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h1  class="close-btn" onclick="stopvideo()">X</h1>
+        </div>
+
+
+        <script>
+            console.log("hello");
+            var videoplayer = document.getElementById("video-player");
+            var myvid = document.getElementById("fvd");
+
+            function stopvideo(){
+                myvid.src = null;
+                videoplayer.style.display = "none";
+            }
+            function playvideo(file){
+                myvid.src = file;
+                videoplayer.style.display = "block";
+            }
+            
+        </script>
+    </body>
+</html>

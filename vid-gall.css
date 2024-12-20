@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #2e8d86 ;
+}
+
+.container{
+    width: 80%;
+    margin: 80px auto;
+}
+.container h1{
+    color: white;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.row{
+    display: flex;
+    align-items: center; justify-content: center;
+    flex-wrap: wrap; 
+}
+@media(max-width: 1000px){
+    .row{
+        flex-direction: column;
+    }
+}
+.col{
+   flex-basis: 50%; align-items: center;
+   min-width: 250px; 
+}
+.re{
+    height: 100%; 
+}
+@media(max-width: 1000px){
+    .col{
+        min-width: 90%;
+    }
+}
+
+
+.feature-img{
+    width: 83%; height: 100%;
+    margin: auto;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.play-btn{
+    width: 110px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+@media(max-width: 1000px){
+    .feature-img #mng{
+        height: 20rem;
+    }
+    .feature-img{
+        width: 100%;
+    }
+    .play-btn{
+        width: 110px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+    }
+}
+
+
+.small-img-row{
+    display: flex;
+    background: #efefef;
+    margin: 20px auto;
+    align-items: center;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 85%;
+}
+.small-img{
+    position: relative; cursor: pointer;
+}
+.small-img img{
+    width: 12rem;
+}
+.small-img-row p{
+    margin-left: 20px;
+    color: #707070;
+    font-size: 15px;
+}
+@media(max-width: 1000px){
+    .small-img-row{
+        flex-direction: column;
+        
+    }
+    .small-img img{
+        width: 100%; 
+    }
+    .small-img-row p{
+        margin-left: 0px; padding: 1rem;
+    }
+}
+
+.small-img .play-btn{
+    width: 35px;
+}
+.video-player{
+    width: 80%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+video:focus{
+    outline: none;
+}
+.close-btn{
+    font-family: sans-serif;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    cursor: pointer;
+    color: whitesmoke;
+}
+@media(max-width: 3010px){
+    .video-player{
+        width: 90%; height: 70%;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+    }
+}
+
